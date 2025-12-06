@@ -8,14 +8,16 @@
     function hitungNilai() {
       const pgBenar = parseInt(document.getElementById("pgBenar").value) || 0;
       const isianBenar = parseInt(document.getElementById("isianBenar").value) || 0;
+      const isian2Benar = parseInt(document.getElementById("isian2Benar").value) || 0;
       const uraianBenar = parseInt(document.getElementById("uraianBenar").value) || 0;
 
       const skorPG = pgBenar * 1;
       const skorIsian = isianBenar * 1;
+      const skorIsian2 = isian2Benar * 1;
       const skorUraian = uraianBenar * 3;
 
-      const totalSkor = skorPG + skorIsian + skorUraian;
-      const skorIdeal = (20 * 1) + (15 * 1) + (5 * 3);
+      const totalSkor = skorPG + skorIsian + skorIsian2 + skorUraian;
+      const skorIdeal = (20 * 1) + (15 * 1) + (10 * 1) + (5 * 3);
 
       const nilaiAkhir = (totalSkor / skorIdeal) * 100;
       const nilaiAkhirScaled = 70 + (nilaiAkhir / 100) * 30;
@@ -130,6 +132,9 @@
 
     <label>Isian Benar (maks: 15):</label>
     <input type="number" id="isianBenar" max="15" min="0" />
+
+    <label>Isian 2 Benar (maks: 10):</label>
+    <input type="number" id="isian2Benar" max="10" min="0" />
 
     <label>Uraian Benar (maks: 5):</label>
     <input type="number" id="uraianBenar" max="5" min="0" />
